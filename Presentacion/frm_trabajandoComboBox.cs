@@ -26,7 +26,7 @@ namespace Presentacion
         {
             cmb_cursos.Items.Add(txt_nuevo.Text);
             txt_nuevo.Text = "";
-           // MessageBox.Show("Curso Registrado");
+            MessageBox.Show("Curso Registrado");
         }
     }
 }

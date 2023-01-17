@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Presentacion</RootNamespace>
     <AssemblyName>Presentacion</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_datagridview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_datagridview.Designer.cs">
+      <DependentUpon>frm_datagridview.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_encuensta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,12 @@
     </Compile>
     <Compile Include="frm_numericupdown.Designer.cs">
       <DependentUpon>frm_numericupdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_principal.Designer.cs">
+      <DependentUpon>frm_principal.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_tiempo.cs">
       <SubType>Form</SubType>
@@ -71,6 +83,18 @@
     <Compile Include="frm_trabajandoComboBox.Designer.cs">
       <DependentUpon>frm_trabajandoComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_trackbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_trackbar.Designer.cs">
+      <DependentUpon>frm_trackbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdi_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdi_principal.Designer.cs">
+      <DependentUpon>mdi_principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="MiPrimerFormulario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,17 +103,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_datagridview.resx">
+      <DependentUpon>frm_datagridview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_encuensta.resx">
       <DependentUpon>frm_encuensta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_numericupdown.resx">
       <DependentUpon>frm_numericupdown.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_principal.resx">
+      <DependentUpon>frm_principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_tiempo.resx">
       <DependentUpon>frm_tiempo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_trabajandoComboBox.resx">
       <DependentUpon>frm_trabajandoComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_trackbar.resx">
+      <DependentUpon>frm_trackbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdi_principal.resx">
+      <DependentUpon>mdi_principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MiPrimerFormulario.resx">
       <DependentUpon>MiPrimerFormulario.cs</DependentUpon>
@@ -102,6 +138,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -115,6 +152,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{c135c281-7c93-4c27-b12c-e40b7daa134e}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{b1990cba-23e4-4e25-9d28-68bd98e4553c}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

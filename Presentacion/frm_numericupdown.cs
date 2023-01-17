@@ -20,8 +20,8 @@ namespace Presentacion
         private void btn_mostrar_Click(object sender, EventArgs e)
         {
             String DiaTexto;
-            decimal Nrodia;
-            Nrodia = num_nrodia.Value;
+            int Nrodia;
+            Nrodia = Convert.ToInt32(num_nrodia.Value);
 
             switch (Nrodia)
             {

@@ -34,12 +34,13 @@
             this.btn_iniciar = new System.Windows.Forms.Button();
             this.btn_detener = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 48);
+            this.label1.Location = new System.Drawing.Point(21, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 0;
@@ -47,7 +48,7 @@
             // 
             // txt_contador
             // 
-            this.txt_contador.Location = new System.Drawing.Point(77, 45);
+            this.txt_contador.Location = new System.Drawing.Point(77, 76);
             this.txt_contador.Name = "txt_contador";
             this.txt_contador.ReadOnly = true;
             this.txt_contador.Size = new System.Drawing.Size(111, 20);
@@ -76,14 +77,21 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(12, 16);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(404, 23);
+            this.progressBar1.TabIndex = 4;
             // 
             // frm_tiempo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 243);
+            this.ClientSize = new System.Drawing.Size(450, 243);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btn_detener);
             this.Controls.Add(this.btn_iniciar);
             this.Controls.Add(this.txt_contador);
@@ -103,5 +111,6 @@
         private System.Windows.Forms.Button btn_iniciar;
         private System.Windows.Forms.Button btn_detener;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
