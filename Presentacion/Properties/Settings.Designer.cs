@@ -22,5 +22,16 @@ namespace Presentacion.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5Q0PMR7\\SQLENTERPRISE;Initial Catalog=MiBaseDatos;Persist Sec" +
+            "urity Info=True;User ID=sa;Password=a123456.")]
+        public string cn {
+            get {
+                return ((string)(this["cn"]));
+            }
+        }
     }
 }

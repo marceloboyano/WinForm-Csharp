@@ -40,7 +40,7 @@
             this.btn_salir = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,8 +53,9 @@
             this.Dgv_principal.Location = new System.Drawing.Point(270, 82);
             this.Dgv_principal.Name = "Dgv_principal";
             this.Dgv_principal.ReadOnly = true;
-            this.Dgv_principal.Size = new System.Drawing.Size(300, 100);
+            this.Dgv_principal.Size = new System.Drawing.Size(366, 209);
             this.Dgv_principal.TabIndex = 0;
+            this.Dgv_principal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_principal_CellClick);
             // 
             // label1
             // 
@@ -67,6 +68,7 @@
             // 
             // txt_descripcion_ca
             // 
+            this.txt_descripcion_ca.Enabled = false;
             this.txt_descripcion_ca.Location = new System.Drawing.Point(76, 50);
             this.txt_descripcion_ca.Name = "txt_descripcion_ca";
             this.txt_descripcion_ca.Size = new System.Drawing.Size(141, 20);
@@ -74,15 +76,18 @@
             // 
             // btn_cancelar
             // 
+            this.btn_cancelar.Enabled = false;
             this.btn_cancelar.Location = new System.Drawing.Point(76, 100);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(58, 22);
             this.btn_cancelar.TabIndex = 3;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_guardar
             // 
+            this.btn_guardar.Enabled = false;
             this.btn_guardar.Location = new System.Drawing.Point(159, 100);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(58, 22);
@@ -93,34 +98,37 @@
             // 
             // btn_nuevo
             // 
-            this.btn_nuevo.Location = new System.Drawing.Point(22, 216);
+            this.btn_nuevo.Location = new System.Drawing.Point(21, 297);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(75, 47);
             this.btn_nuevo.TabIndex = 5;
             this.btn_nuevo.Text = "Nuevo";
             this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_actualizar
             // 
-            this.btn_actualizar.Location = new System.Drawing.Point(103, 216);
+            this.btn_actualizar.Location = new System.Drawing.Point(102, 297);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(75, 47);
             this.btn_actualizar.TabIndex = 6;
             this.btn_actualizar.Text = "Actualizar";
             this.btn_actualizar.UseVisualStyleBackColor = true;
+            this.btn_actualizar.Click += new System.EventHandler(this.btn_actualizar_Click);
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(184, 216);
+            this.btn_eliminar.Location = new System.Drawing.Point(183, 297);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(75, 47);
             this.btn_eliminar.TabIndex = 7;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_reporte
             // 
-            this.btn_reporte.Location = new System.Drawing.Point(265, 216);
+            this.btn_reporte.Location = new System.Drawing.Point(264, 297);
             this.btn_reporte.Name = "btn_reporte";
             this.btn_reporte.Size = new System.Drawing.Size(75, 47);
             this.btn_reporte.TabIndex = 8;
@@ -129,7 +137,7 @@
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(346, 217);
+            this.btn_salir.Location = new System.Drawing.Point(345, 298);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(75, 47);
             this.btn_salir.TabIndex = 9;
@@ -152,21 +160,22 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Buscar";
             // 
-            // button1
+            // btn_buscar
             // 
-            this.button1.Location = new System.Drawing.Point(485, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 22);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_buscar.Location = new System.Drawing.Point(485, 43);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(58, 22);
+            this.btn_buscar.TabIndex = 12;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.button1_Click);
             // 
             // frm_Categorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 298);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(744, 368);
+            this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.txt_buscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_salir);
@@ -180,6 +189,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Dgv_principal);
             this.Name = "frm_Categorias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento de Categorias";
             this.Load += new System.EventHandler(this.frm_Categorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).EndInit();
@@ -202,6 +212,6 @@
         private System.Windows.Forms.Button btn_salir;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_buscar;
     }
 }
