@@ -28,7 +28,7 @@ namespace Datos
             SqlConnection Cadena = new SqlConnection();
             try
             {
-                Cadena.ConnectionString = "";
+                Cadena.ConnectionString = "Server="+ this.Servidor + "; Database=" + this.Base + "; User Id="+ this.Usuario+ "; Password="+this.Clave;
 
             }
             catch(Exception ex)
