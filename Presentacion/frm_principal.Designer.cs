@@ -38,6 +38,8 @@
             this.numericUpDownToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.encuestaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesoTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proceso1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,10 +51,11 @@
             this.salirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miBar = new System.Windows.Forms.ToolStrip();
             this.m_btn_01 = new System.Windows.Forms.ToolStripButton();
-            this.m_btn_02 = new System.Windows.Forms.ToolStripButton();
-            this.m_btn_03 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.m_btn_02 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.m_btn_03 = new System.Windows.Forms.ToolStripButton();
+            this.unidadesDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miMenu.SuspendLayout();
             this.miBar.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +83,10 @@
             this.tiempoToolStripMenuItem,
             this.numericUpDownToolStripMenuItem,
             this.encuestaToolStripMenuItem,
-            this.dataGridViewToolStripMenuItem});
+            this.dataGridViewToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.toolStripMenuItem1,
+            this.unidadesDeMedidaToolStripMenuItem});
             this.datosMestrosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("datosMestrosToolStripMenuItem.Image")));
             this.datosMestrosToolStripMenuItem.Name = "datosMestrosToolStripMenuItem";
             this.datosMestrosToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
@@ -130,6 +136,18 @@
             this.dataGridViewToolStripMenuItem.Name = "dataGridViewToolStripMenuItem";
             this.dataGridViewToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.dataGridViewToolStripMenuItem.Text = "DataGridView";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(215, 6);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(218, 22);
+            this.toolStripMenuItem1.Text = "Categorías";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // procesosToolStripMenuItem
             // 
@@ -219,6 +237,11 @@
             this.m_btn_01.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m_btn_01.Click += new System.EventHandler(this.m_btn_01_Click);
             // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 50);
+            // 
             // m_btn_02
             // 
             this.m_btn_02.AutoSize = false;
@@ -231,6 +254,11 @@
             this.m_btn_02.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.m_btn_02.Click += new System.EventHandler(this.m_btn_02_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 50);
+            // 
             // m_btn_03
             // 
             this.m_btn_03.AutoSize = false;
@@ -242,15 +270,12 @@
             this.m_btn_03.Text = "3er boton";
             this.m_btn_03.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // toolStripSeparator2
+            // unidadesDeMedidaToolStripMenuItem
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 50);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 50);
+            this.unidadesDeMedidaToolStripMenuItem.Name = "unidadesDeMedidaToolStripMenuItem";
+            this.unidadesDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.unidadesDeMedidaToolStripMenuItem.Text = "Unidades de Medida";
+            this.unidadesDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.unidadesDeMedidaToolStripMenuItem_Click);
             // 
             // frm_principal
             // 
@@ -299,5 +324,8 @@
         private System.Windows.Forms.ToolStripButton m_btn_03;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem unidadesDeMedidaToolStripMenuItem;
     }
 }

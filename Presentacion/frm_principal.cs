@@ -15,6 +15,8 @@ namespace Presentacion
         //instanciar los formularios de trabajo para el menu principal
         MiPrimerFormulario frm_01;
         frm_trackbar frm_02;
+        frm_Categorias frm_ca;
+        frm_Unidades_Medidas frm_um;
         
         public frm_principal()
         {
@@ -43,6 +45,16 @@ namespace Presentacion
         void Alta_frm_02(object sender, EventArgs e)
         {
             frm_02 = null;
+        }
+
+        void Alta_frm_ca(object sender, EventArgs e)
+        {
+            frm_ca = null;
+        }
+
+        void Alta_frm_um(object sender, EventArgs e)
+        {
+            frm_um = null;
         }
         private void trackBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -93,6 +105,36 @@ namespace Presentacion
             else
             {
                 frm_02.Activate();
+            }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (frm_ca == null)
+            {
+                frm_ca = new frm_Categorias();
+                frm_ca.MdiParent = this;
+                frm_ca.FormClosed += new FormClosedEventHandler(Alta_frm_ca);
+                frm_ca.Show();
+            }
+            else
+            {
+                frm_ca.Activate();
+            }
+        }
+
+        private void unidadesDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frm_um == null)
+            {
+                frm_um = new frm_Unidades_Medidas();
+                frm_um.MdiParent = this;
+                frm_um.FormClosed += new FormClosedEventHandler(Alta_frm_um);
+                frm_um.Show();
+            }
+            else
+            {
+                frm_um.Activate();
             }
         }
     }

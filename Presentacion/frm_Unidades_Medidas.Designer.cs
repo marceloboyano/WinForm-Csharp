@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class frm_Categorias
+    partial class frm_Unidades_Medidas
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.Dgv_principal = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_descripcion_ca = new System.Windows.Forms.TextBox();
+            this.txt_descripcion_um = new System.Windows.Forms.TextBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
@@ -62,17 +62,17 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Categoria";
+            this.label1.Text = "Medida";
             // 
-            // txt_descripcion_ca
+            // txt_descripcion_um
             // 
-            this.txt_descripcion_ca.Enabled = false;
-            this.txt_descripcion_ca.Location = new System.Drawing.Point(76, 50);
-            this.txt_descripcion_ca.Name = "txt_descripcion_ca";
-            this.txt_descripcion_ca.Size = new System.Drawing.Size(141, 20);
-            this.txt_descripcion_ca.TabIndex = 2;
+            this.txt_descripcion_um.Enabled = false;
+            this.txt_descripcion_um.Location = new System.Drawing.Point(76, 50);
+            this.txt_descripcion_um.Name = "txt_descripcion_um";
+            this.txt_descripcion_um.Size = new System.Drawing.Size(141, 20);
+            this.txt_descripcion_um.TabIndex = 2;
             // 
             // btn_cancelar
             // 
@@ -172,7 +172,7 @@
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // frm_Categorias
+            // frm_Unidades_Medidas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,13 +187,13 @@
             this.Controls.Add(this.btn_nuevo);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_cancelar);
-            this.Controls.Add(this.txt_descripcion_ca);
+            this.Controls.Add(this.txt_descripcion_um);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Dgv_principal);
-            this.Name = "frm_Categorias";
+            this.Name = "frm_Unidades_Medidas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mantenimiento de Categorias";
-            this.Load += new System.EventHandler(this.frm_Categorias_Load);
+            this.Text = "Mantenimiento de Unidades de Medidas";
+            this.Load += new System.EventHandler(this.frm_Unidades_Medidas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_principal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,7 +204,7 @@
 
         private System.Windows.Forms.DataGridView Dgv_principal;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_descripcion_ca;
+        private System.Windows.Forms.TextBox txt_descripcion_um;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_nuevo;
